@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=League+Gothic&family=Petrona:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap" rel="stylesheet">
+        <style>
+        @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        html,body{
+            margin:0;
+            padding:0;
+        }
+        #page1{
+            height:70vh;
+            background-color:red;
+       }
+        #page2{
+            height:70vh;
+            background-color:whitesmoke;
+        }
+        #page3{
+            height:120vh;
+            background-color: whitesmoke;
+        }
+        #footer{
+            height:60vh;
+             background-color:black;
+        }
+        #nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-image: linear-gradient(to right, #888888, #cccccc);
+        height: 10vh;
+        padding: 0 40px;
+        position: sticky;
+    }
+
+#text {
+    font-size: 40px;
+    color: black;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+#text span {
+    color: blue;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+ul li a:hover {
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.search-box i {
+    margin-right: 8px;
+    color: gray;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-box input::placeholder {
+    color: #666;
+}
+#nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, #888888, #cccccc);
+    height: 10vh;
+    padding: 0 40px;
+   
+}
+#page1{
+    height: 70vh;
+    background-image: url("https://www.shutterstock.com/image-vector/cartoon-style-city-buildings-vector-600nw-603496817.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;       
+    background-position: bottom;
+    position: relative;
+}
+#blackover {
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;                
+    justify-content: center;     
+    align-items: center;          
+}
+
+#contentbox {
+    
+    height: 380px;
+    width: 50%;
+    padding: 40px 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+#page2{
+    display: flex;
+    gap:40px;
+    align-items:center ;
+    justify-content: center;
+   background-color: #232F3E;
+    position:relative;
+}
+#card{
+    height:50vh;
+    border:none;
+    width:20vw;
+    background-color: gray;
+    box-shadow: 2px 5px 3px 5px;
+    border-radius: 12px;
+    font-family: 'Gilroy-Bold', sans-serif;
+     transition: all 0.7s;
+     position: relative;
+     display: block;
+}
+#card:hover{
+  
+    transform: scale(1.2) ;
+}
+#main{
+    display: block;
+}
+#page2conthead {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Gilroy-Bold', sans-serif;
+    margin: 50px 0 20px;
+    color: blue;
+    letter-spacing: 2px;
+    background: none;    
+    padding: 0;
+}
+
+#page2desc {
+    font-family: 'League Gothic', sans-serif;
+  background: linear-gradient(to right, #b0b0b0, #d9d9d9, #f2f2f2);
+    
+    text-align: center;
+    margin: 0 auto 40px;
+    width: 80%;
+    line-height: 1.6;
+    background: none; 
+    font-size: 50px; 
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+}
+#contentbox {
+    max-width: 800px;
+}
+
+
+#page2conthead {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'League Gothic', sans-serif;
+     margin: 0;           
+    padding: 0;    
+    letter-spacing: 2px;
+    background: linear-gradient(to right, blue, skyblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#main{
+    background: linear-gradient(135deg, #f9f9f9, #eef3f8);
+}
+#nav a{
+    text-decoration: none;
+    font-size: 30px;
+   font-family: 'Gilroy-Bold', sans-serif;
+   transition: all 0.1s;
+}
+#nav a:hover{
+    color: blue;
+    border-bottom: 2px solid blue;
+
+}
+#footer{
+    display:block;
+    font-family: 'Gilroy-Bold',sans-serif;
+    position:relative;
+}
+#seprator{
+    margin-top: 50px;
+    border: 0.1px solid whitesmoke;
+    margin-left: 120px;
+    margin-right:120px;
+}
+#main2{
+    /* border: 3px solid rgb(190, 28, 28); */
+    height:30vh;
+    padding-top: 70px;
+
+}
+#icons {
+    display: flex;
+    gap: 55px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    
+
+}
+
+.media {
+    font-size: 30px;
+    color: #bbb;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.media:hover {
+    color: blue;
+    transform: scale(1.2);
+}
+#main2 ul{
+    gap: 150px;
+}
+
+#img{
+    /* border:2px solid red; */
+    border-radius: 12px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    /* height:50vh;
+    width:20vw; */
+    width:20vw;
+    height:25vh;
+    background-color: #FEBD69
+}
+#contentbelow{
+    /* border:2px solid red; */
+
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    /* height:50vh;
+    width:20vw; */
+    width:20vw;
+    height:25vh;
+    background-color:white;
+}
+#footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+#footer p {
+  color: white;   
+  margin: 0;
+}
+#copyright {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  margin: 30px 0 0 0;
+  padding-top: 12px;
+
+}
+#page3{
+    display:block;
+}
+#inside1{
+    border:none;
+    height:60vh;
+    background-color: whitesmoke;
+}
+#sep{
+    margin-right: 82px;
+    margin-left: 82px;
+    height: 5px;
+    background-color: grey;
+
+}
+#inside2{
+    border:none;
+    height:60vh;
+    background-color: whitesmoke;
+}
+#contentcard{
+    
+    margin-top: 42px;
+    margin-left: 80px;
+    margin-right: 80px;
+    height:30vh;
+    display: flex;
+    justify-content: space-around;
+}
+#insider{
+    height:30vh;
+    width:20vw;
+}
+#sm{
+    border:none;
+    background-color: #FEBD69;
+    color:white;
+    font-family: 'Gilroy-Bold';
+    border-radius: 5px;
+    font-size:20px;
+    width: 100px;
+    height:40px;
+    margin-left: 230px;
+    margin-top: 12px;
+    transition: all .7s;}
+#sm:hover{
+    transform: scale(1.2);
+    background-color: blue;
+    cursor: pointer;
+}
+#imq{
+    width:15vw;
+    margin-left: 750px;
+    margin-top:150px;
+    display:flex;
+    gap:30px;
+    
+}
+#imq img:hover{
+    transition: all 0.7s;
+    transform: scale(1.5);
+    cursor: pointer;
+    
+}
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <p id="text">Your<span>Logo</span></p>
+        <ul>
+            <li><a  href="#">Home</a></li>
+            <li><a  href="#">Portfolio</a></li>
+            <li><a  href="#">About</a></li>
+            <li><a  href="#">Contact Us</a></li>
+        </ul>
+        <a href="signup.html" id="sign" target="blank">Sign in</a>
+        <div class="search-box">
+            <i class="ri-search-line"></i>
+            <input type="text" placeholder="search to find">
+        </div>
+    </div>
+
+
+    <div id="page1">
+        <div id="blackover">
+            <div id="contentbox">
+                <p style="color:whitesmoke;font-family: League Gothic, sans-serif; font-size: 60px; padding-left: 90px;">GOOD DESIGN IS GOOD BUISNESS</p>
+                <p style="color:grey;font-family: League Gothic, sans-serif; font-size: 28px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci numquam nemo sunt consectetur obcaecati hic iusto dolores possimus cumque qui eaque tempora doloremque, perspiciatis eveniet excepturi dolorem quaerat aut placeat?</p>
+            </div>
+        </div>
+        
+    </div>
+    <div id="main">
+        <div id="page2conthead" style="font-family: League Gothic, sans-serif; font-size: 80px; "><u>TOPIC TO BE GIVEN</u></div>
+        <br>
+        <p id="page2desc">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi impedit excepturi sit fugiat est aspernatur praesentium itaque in? Alias illum aspernatur dolor soluta a sint vitae error dolores ab eos, laudantium, provident earum exercitationem, accusamus recusandae distinctio quasi sed voluptatum blanditiis itaque possimus explicabo!
+</p>
+        <div id="page2">
+            <div id="card">
+                <div id="img">
+                       <i class="ri-image-circle-line" style="font-size: 150px; padding-left: 85px;"></i>
+                </div>
+                <div id="contentbelow">
+                   <p style="text-align: center;font-size: medium;color:#ab6d63;">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Saepe laborum nostrum harum 
+                    voluptatum porro. Alias ipsum optio, sapiente corrupti 
+                    reiciendis incidunt quae vitae dolorum minima id ut molestiae! 
+                    Quaerat, cumque? Veniam non architecto nemo consequuntur cumque 
+                    doloremque 
+                    distinctio qui dicta illo quia tempore, modi dignissimos.</p>
+                </div>
+
+            </div>
+            <div id="card">
+                 <div id="img">
+                  <i class="ri-image-circle-line" style="font-size: 150px; padding-left: 85px;"></i>
+                </div>
+                <div id="contentbelow">
+                     <p style="text-align: center;font-size: medium;color:#ab6d63;">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Saepe laborum nostrum harum 
+                    voluptatum porro. Alias ipsum optio, sapiente corrupti 
+                    reiciendis incidunt quae vitae dolorum minima id ut molestiae! 
+                    Quaerat, cumque? Veniam non architecto nemo consequuntur cumque 
+                    doloremque 
+                    distinctio qui dicta illo quia tempore, modi dignissimos.</p>
+                </div>
+            </div>
+            <div id="card">
+                <div id="img">
+                   <i class="ri-image-circle-line" style="font-size: 150px; padding-left: 85px;"></i>
+                </div>
+                <div id="contentbelow">
+                    <p style="text-align: center;font-size: medium;color:#ab6d63;">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Saepe laborum nostrum harum 
+                    voluptatum porro. Alias ipsum optio, sapiente corrupti 
+                    reiciendis incidunt quae vitae dolorum minima id ut molestiae! 
+                    Quaerat, cumque? Veniam non architecto nemo consequuntur cumque 
+                    doloremque 
+                    distinctio qui dicta illo quia tempore, modi dignissimos.</p>
+                </div>
+            </div>
+            <div id="card">
+                   <div id="img">
+                      <i class="ri-image-circle-line" style="font-size: 150px; padding-left: 85px;"></i>
+                </div>
+                <div id="contentbelow">
+                      <p style="text-align: center;font-size: medium;color:#ab6d63;">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Saepe laborum nostrum harum 
+                    voluptatum porro. Alias ipsum optio, sapiente corrupti 
+                    reiciendis incidunt quae vitae dolorum minima id ut molestiae! 
+                    Quaerat, cumque? Veniam non architecto nemo consequuntur cumque 
+                    doloremque 
+                    distinctio qui dicta illo quia tempore, modi dignissimos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page3">
+        <div id="inside1">
+                <p style="color:blue; font-size: x-large;text-align: center; font-family: 'League Gothic' ; font-size: 100px;">WHAT WE OFFER</p>
+                <p style="color:gray;text-align: center; font-family: 'Gilroy-Bold' ; padding-left: 100px;padding-right:100px ; ">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Excepturi quae, nesciunt vitae in officiis corrupti debitis facilis quod! Quae ullam, aliquid similique
+                     harum neque nisi autem. Quasi repellendus beatae facilis mollitia? Aliquam distinctio eum illum, voluptatem libero sed 
+                     maxime repellendus, assumenda magni, sit consequuntur.</p>
+                <div id="contentcard">
+                    <div id="insider">
+                        <p style="color:blue;font-size:32px ; font-family: 'Gilroy-Bold';">WEB DESIGN</p>
+                        <p style="color:black;font-size:17px ; text-align:left; font-family: 'Gilroy-Bold';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eligendi asperiores saepe excepturi ipsum assumenda eaque doloribus maiores ipsam? Ipsa beatae sed alias hic dolor autem sunt explicabo quo.</p>
+                        <button id="sm">See More..</button>
+                    </div>
+                    <div id="insider">
+                        <p style="color:blue;font-size:32px ; font-family: 'Gilroy-Bold';">TOPIC 2</p>
+                        <p style="color:black;font-size:17px ; text-align:left; font-family: 'Gilroy-Bold';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eligendi asperiores saepe excepturi ipsum assumenda eaque doloribus maiores ipsam? Ipsa beatae sed alias hic dolor autem sunt explicabo quo.</p>
+                        <button id="sm">See More..</button>
+                    </div>
+                    <div id="insider">
+                        <p style="color:blue;font-size:32px ; font-family: 'Gilroy-Bold';">TOPIC 3</p>
+                        <p style="color:black;font-size:17px ; text-align:left; font-family: 'Gilroy-Bold';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eligendi asperiores saepe excepturi ipsum assumenda eaque doloribus maiores ipsam? Ipsa beatae sed alias hic dolor autem sunt explicabo quo.</p>
+                        <button id="sm">See More..</button>
+                    </div>
+                    <div id="insider">
+                        <p style="color:blue;font-size:32px ; font-family: 'Gilroy-Bold';">TOPIC 4</p>
+                        <p style="color:black;font-size:17px ; text-align:left; font-family: 'Gilroy-Bold';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eligendi asperiores saepe excepturi ipsum assumenda eaque doloribus maiores ipsam? Ipsa beatae sed alias hic dolor autem sunt explicabo quo.</p>
+                        <button id="sm">See More..</button>
+                    </div>
+                </div>
+                
+        </div>
+        <div id="sep"></div>
+        <div id="inside2">
+            <p style="color:blue; font-size: x-large;text-align: center; font-family: 'League Gothic' ; font-size: 100px;">TESTIMONIALS</p>
+            <p style="color:black;text-align: center; font-family: 'Gilroy-Bold'; font-size: 30px; padding-left: 20px;padding-right: 20px;">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ratione sequi eum magnam. Id labore tenetur facilis quo?"</p>
+            <div id="imq">
+                <img src="boy (1).png" width="90px" height="90px">
+                <img src="girl.png" width="90px" height="90px">
+                <img src="boy (1).png" width="90px" height="90px">
+
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+    <div id="main2">
+        <ul>
+            <li><p style="color:white; font-size: 40px; margin-left: 120px;">Your<span style="color:blue">Logo</span></p><br><p style="color:white; font-size: 15px; margin-left: 130px;">SLOGAN OF THE WEB</p></li>
+            <li><p style="color:white; font-size: 30px;  margin-top: 12px;">CONTENT 1</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p></li>
+           <li><p style="color:white; font-size: 30px;  margin-top: 12px;">CONTENT 2</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p></li>
+            <li><p style="color:white; font-size: 30px;  margin-top: 12px;">CONTENT 3</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p></li>
+            <li><p style="color:white; font-size: 30px;  margin-top: 12px;">CONTENT 4</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p><p style="color:white; font-size: 15px; margin-left: 10px;">SLOGAN OF THE WEB</p></li>
+        </ul>
+    </div>
+    
+    <div id="seprator"></div>
+    
+    <div id="socialmedialinks">
+        <div id="icons">
+            <i class="ri-facebook-fill media"></i>
+            <i class="ri-twitter-fill media"></i>
+            <i class="ri-wifi-line media"></i>
+            <i class="ri-google-fill media"></i>
+            <i class="ri-more-fill media"></i>
+        </div>
+        <p id="copyright"><i class="ri-copyright-line"></i> Copyright All rights reserved.</p>
+
+    </div>
+</div>
+
+
+</body>
+
+</html>
