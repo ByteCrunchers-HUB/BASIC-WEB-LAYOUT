@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>WEBLAYOUT</title>
+      <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=League+Gothic&family=Petrona:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap" rel="stylesheet">
+        <style>
+        @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Gilroy-Bold', sans-serif;
+      background-color: #f5f5f5;
+    }
+    .section-padding {
+      padding: 60px 80px;
+    }
+    h2.section-title {
+        text-align: center;
+        font-family: 'League Gothic', sans-serif;
+        font-size: 50px;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }
+
+    #nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-image: linear-gradient(to right, #888, #ccc);
+      font-family: 'Gilroy-Bold';
+      height: 10vh;
+      padding: 0 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    #text { font-size: 40px; color: black; font-family: 'Gilroy-Bold'; }
+    #text span { color: blue; }
+    ul { display: flex; list-style: none; gap: 50px; font-family: 'Gilroy-Bold'; }
+    ul li a { text-decoration: none; color: black; font-size: 20px; transition: .3s; }
+    ul li a:hover { color: blue; border-bottom: 2px solid blue; }
+    .search-box { display: flex; align-items: center; background: #fff; padding: 5px 10px; border-radius: 20px; }
+    .search-box i { margin-right: 8px; color: gray; }
+    .search-box input { border: none; outline: none; font-size: 16px; }
+    #nav a { text-decoration: none; font-size: 30px; font-family: 'Gilroy-Bold'; transition: .1s; }
+    #nav a:hover { color: blue; border-bottom: 2px solid blue; }
+
+    .page-header {
+      height: 40vh;
+      background-image: url("https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=2071&auto=format&fit=crop");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .page-header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .page-header h1 {
+      color: white;
+      z-index: 1;
+      font-size: 80px;
+      font-family: 'League Gothic', sans-serif;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .mission-container {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        background: #fff;
+        border-radius: 12px;
+    }
+    .mission-image { flex: 1; }
+    .mission-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 12px 0 0 12px;
+    }
+    .mission-content {
+        flex: 1.2;
+        padding: 40px;
+    }
+    .mission-content h2 {
+        font-size: 50px;
+        font-family: 'League Gothic', sans-serif;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+    .mission-content p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+    .team-member-card {
+        background: white;
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform .4s;
+    }
+    .team-member-card:hover {
+        transform: translateY(-10px);
+    }
+    .team-member-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 4px solid #f0f0f0;
+    }
+    .team-member-card h3 {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    .team-member-card h4 {
+        font-size: 16px;
+        color: blue;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+    .team-member-card p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #666;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .value-card {
+      background: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .value-card i {
+      font-size: 50px;
+      color: blue;
+      margin-bottom: 20px;
+    }
+    .value-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .cta-button {
+      background-color: blue; color: white; padding: 15px 30px;
+      text-decoration: none; border-radius: 50px; font-size: 18px;
+      font-weight: bold; transition: transform 0.3s, background-color 0.3s;
+    }
+    .cta-button:hover { transform: scale(1.05); background-color: #0000dd; }
+
+  
+    .final-cta {
+        text-align: center;
+        background-image: linear-gradient(to right, #888, #ccc);
+        color: black;
+    }
+
+   
+    #footer { background-color: black; padding: 20px; text-align: center; }
+    #footer p { color: white; margin: 0; }
+    #copyright { color: white; font-size: 14px; text-align: center; margin: 30px 0 0 0; padding-top: 12px; }
+    #icons { display: flex; gap: 55px; align-items: center; justify-content: center; margin-top: 40px; }
+    .media { font-size: 30px; color: #bbb; cursor: pointer; transition: .3s; }
+    .media:hover { color: blue; transform: scale(1.2); }
+  </style>
+</head>
+<body>
+
+  <div id="nav">
+    <p id="text">Your<span>Logo</span></p>
+    <ul>
+       <li><a href="landingpage.html" style="color:blue;border-bottom:2px solid blue;" target="self">Home</a></li>
+            <li><a href="portfolio.html" target="self">Portfolio</a></li>
+            <li><a href="about.html" target="self">About</a></li>
+            <li><a href="contactuspage.html" target="self">Contact Us</a></li>
+    </ul>
+    <a href="signup.html" id="sign" target="blank">Sign in</a>
+    <div class="search-box">
+      <i class="ri-search-line"></i>
+      <input type="text" placeholder="search to find">
+    </div>
+  </div>
+
+  <section class="page-header">
+    <h1>ABOUT US</h1>
+  </section>
+  
+  <section class="section-padding">
+      <div class="mission-container">
+          <div class="mission-image">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Office meeting">
+          </div>
+          <div class="mission-content">
+              <h2>OUR MISSION</h2>
+              <p>We are driven by a single goal: to empower businesses by creating impactful and engaging digital experiences. We believe that great design is not just about aesthetics, but about solving problems and creating intuitive, user-friendly solutions that drive results.</p>
+              <p>Our collaborative process ensures we are always aligned with our clients' vision, working together to build digital products that are not only beautiful but also built to last.</p>
+          </div>
+      </div>
+  </section>
+
+  <section class="section-padding">
+      <h2 class="section-title">MEET THE TEAM</h2>
+      <div class="team-grid">
+          <div class="team-member-card">
+              <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1887&auto=format&fit=crop" alt="Team Member 1">
+              <h3>Alex Johnson</h3>
+              <h4>Lead Designer</h4>
+              <p>Alex is the creative force behind our designs, with a passion for clean aesthetics and user-centric layouts.</p>
+          </div>
+          <div class="team-member-card">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop" alt="Team Member 2">
+              <h3>David Chen</h3>
+              <h4>Lead Developer</h4>
+              <p>David brings our designs to life with elegant code and a commitment to performance and scalability.</p>
+          </div>
+          <div class="team-member-card">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop" alt="Team Member 3">
+              <h3>Maria Garcia</h3>
+              <h4>Project Manager</h4>
+              <p>Maria ensures every project runs smoothly, on time, and on budget, fostering clear communication.</p>
+          </div>
+          <div class="team-member-card">
+              <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1889&auto=format&fit=crop" alt="Team Member 4">
+              <h3>Robert Smith</h3>
+              <h4>Marketing Strategist</h4>
+              <p>Robert helps our clients grow their reach and connect with their audience through data-driven strategies.</p>
+          </div>
+      </div>
+  </section>
+
+  <section class="section-padding" style="background-color: #e9e9e9;">
+    <h2 class="section-title">OUR VALUES</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <i class="ri-lightbulb-flash-line"></i>
+        <h3>Innovation</h3>
+        <p>We constantly explore new technologies and creative approaches to stay ahead of the curve.</p>
+      </div>
+      <div class="value-card">
+        <i class="ri-shake-hands-line"></i>
+        <h3>Collaboration</h3>
+        <p>We believe the best results come from working closely with our clients and each other.</p>
+      </div>
+      <div class="value-card">
+        <i class="ri-shield-check-line"></i>
+        <h3>Integrity</h3>
+        <p>We operate with transparency and honesty, building lasting trust with our partners.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta section-padding">
+    <h2 class="section-title" style="color: black;">HAVE A PROJECT IN MIND?</h2>
+    <a href="contactuspage.html" class="cta-button">Let's Talk</a>
+  </section>
+
+
+  <div id="footer">
+    <div id="icons">
+      <i class="ri-facebook-fill media"></i>
+      <i class="ri-twitter-fill media"></i>
+      <i class="ri-wifi-line media"></i>
+      <i class="ri-google-fill media"></i>
+      <i class="ri-more-fill media"></i>
+    </div>
+    <p id="copyright"><i class="ri-copyright-line"></i> Copyright All rights reserved.</p>
+  </div>
+
+</body>
+</html>

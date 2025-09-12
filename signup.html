@@ -3,34 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SignUp Page</title>
-
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="signup.css" />
+  <title>WEBLAYOUT</title>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
   />
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+#bg {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.credit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: white;
+  padding-top: 730px;
+  padding-left: 680px;
+  border-radius: 10px;
+}
+
+.name {
+  font-weight: bolder;
+}
+
+#icon {
+  font-weight: bolder;
+}
+
+/* Signup block */
+#blc {
+  display: flex;
+  width: 1200px;
+  height: 650px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+#img {
+  flex: 1;
+  background: url("main.png") no-repeat center center;
+  background-size: cover;
+}
+
+#cont {
+  width: 40%;
+  height: 650px;
+  background-color: white;
+}
+
+#hello {
+  color: #0052d4;
+  text-decoration: underline;
+  font-size: 60px;
+  padding: 80px 0 0 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  opacity: 0.67;
+}
+
+#kuchbhi {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  opacity: 0.5;
+  padding-left: 40px;
+}
+
+#input {
+   position: relative;
+  width: 350px;
+  height: 50px;
+  margin: 20px 40px;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px
+
+}
+input{
+    width:300px;
+    height:40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    text-align: center;
+    font-size: large;
+}
+input::placeholder{
+     font-family: "Montserrat", sans-serif;
+
+}
+i{
+    color: gray;
+    opacity: .4;
+}
+#mid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 40px;
+}
+#cxb {
+  width:19px;    
+  height: 18px;
+  accent-color: #0052d4; 
+  cursor: pointer;
+}
+
+#mid label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+}
+#dc{
+    text-decoration: none;
+    padding-left :60px;
+   font-size: 16px;
+  color: black;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+button{
+    margin-left: 40px;
+    width:250px;
+    height:70px;
+    font-size: 30px;
+    color: white;
+     background: linear-gradient(90deg, #0044aa, #0099ff);
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    margin-top: 30px;
+    border:none;
+    border-radius: 12px;
+}
+#chachi{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+  </style>
 </head>
 
 <body>
   <div id="bg">
-    <!-- Credits -->
+   <button><a href="landingpage.html" style="color:white; text-decoration: none;"><i class="ri-arrow-left-fill" style="color:white;" target="self"></i>BACK TO HOMEPAGE</a></button>
     <div class="credit">
       <span>designed by</span>
       <i class="ri-robot-2-line" id="icon"></i>
       <span class="name">priyanshu</span>
     </div>
 
-    <!-- Signup block -->
 
     <div id="blc">
-      <!-- Left image -->
+     
 
       <div id="img"></div>
 
-      <!-- Right content -->
 
 
       <div id="cont">
@@ -39,7 +204,6 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
 
-        <!-- Input fields -->
 
 
 
